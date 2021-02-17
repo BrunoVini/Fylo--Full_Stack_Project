@@ -1,0 +1,241 @@
+section#home {
+    background-color: #181e2a;
+}
+
+section#home * p, section#home * h1, section#home * h2, section#home * h3 {
+    color: #fff;
+}
+
+#bg {
+    background: url("images/bg-curvy-desktop.svg") no-repeat center center #1c2230;
+}
+
+
+/* ***** FIRST ***** */
+
+section#home .first {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#home .first .image {
+    max-width: 600px;
+}
+
+section#home .first img{
+    width: 100%;
+}
+
+.first .txt {
+    text-align: center;
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+.first button {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #4ec3d4;
+    border-radius: 30px;
+    padding: 10px 15px;
+    width: 200px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.first button:hover {
+    background-color: #8cdae4;
+}
+
+
+/* *****  SECOND ***** */
+
+#bg-2 {
+    background-color: #181e2a;
+}
+
+.second {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.second .box {
+    width: 400px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.second .box .h2 {
+    font-size: 0.8em;
+}
+
+/* ***** Third ***** */
+
+.third .button {
+    border-bottom: 1px solid  #4ec3d4;
+    display: inline-block;
+    cursor: pointer;
+    transition: 400ms;
+} 
+
+.third button {
+    border: none;
+    outline: none;
+    color:  #4ec3d4;
+    display: inline-block;
+    background: transparent;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.third .button img{
+    margin-left: 0px;
+}
+
+.third .button:hover{
+    border-color: #fff;
+}
+
+.third .button:hover img{
+    margin-left: 10px;
+}
+
+.third .button:hover button {
+    color: #fff;
+}
+
+.third .button:hover ~ img {
+    margin-left: 10px;
+}
+
+/* ***** FOURTY ***** */
+
+.fourty {
+    margin-top: 20px;
+}
+
+.fourty .container{
+    background: url("images/bg-quotes.png") no-repeat top left;
+}
+
+.fourty .row {
+    justify-content: center;
+}
+
+.fourty .box {
+    background-color: #21293c;
+    margin: 20px;
+    max-width: 300px;
+    font-size: 0.7em;
+    border-radius: 10px;
+    padding: 20px 40px;
+}
+
+.fourty .box .perfil {
+    display: flex;
+    align-items: center;
+}
+
+.fourty .box .perfil div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fourty .box .perfil p {
+    margin-bottom: 0;
+}
+
+.fourty .box .perfil img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 14px;
+}
+
+.fourty .box .perfil h3, .perfil p {
+    font-size: 0.7em;
+}
+
+
+/* ***** SEND EMAIL ***** */
+
+#email {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+#email .dark {
+    background-color: #0c1524;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#email .form {
+    background-color:  #1c2230;
+    position: relative;
+    z-index: 9;
+    padding: 20px 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* #email form {
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+
+#email .form [type="email"] {
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 10px 15px;
+    width: 60%;
+}
+
+#email .form [type="submit"] {
+    border: none;
+    outline: none;
+    background-color: #49bcd3;
+    color: #fff;
+    border-radius: 40px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: 500ms;
+}
+
+#email .form [type="submit"]:hover {
+    background-color: #8cdae4;
+}
+
+
+@media only screen and (max-width: 770px) {
+    #email .form [type="email"], #email .form [type="submit"] {
+        width: 90%;
+    }
+
+    #email .form [type="text"] {
+        margin-bottom: 20px;
+    }
+
+    #email .form [type="submit"] {
+        margin-left: 0;
+    }
+}

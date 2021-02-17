@@ -1,0 +1,126 @@
+header .closed, #mobile .closed {
+    outline: 0;
+    border: 0;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 35px;
+    background: transparent;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 900;
+}
+
+.topo .closed {
+    outline: 0;
+    border: 0;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+    z-index: 900;
+    left: 0;
+    width: 50px;
+    padding: 0;
+}
+
+.topo .closed div {
+    /* border: 1px solid #fff; */
+    height: 60%;
+    width: 60%;
+    margin-left: 7px;
+    position: relative;
+}
+
+#mobile .closed {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+header .closed i,  #mobile .closed i,  .topo .closed i {
+    display: inline-block;
+    background: #fff;
+    width: 90%;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 4px;
+    transition: all 400ms;
+}
+
+.topo .closed i {
+    width: 90%;
+    height: 3px;
+}
+
+header .open i,  #mobile .open i,  .topo .open i {
+    background: transparent;
+} 
+
+header .closed i::before, 
+header .closed i::after, 
+#mobile .closed i::before, 
+#mobile .closed i::after,
+.topo .closed i::before, 
+.topo .closed i::after {
+    content: '';
+    display: inline-block;
+    background: #fff;
+    width: 95%;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 4px;
+    transition: all 400ms;
+}
+
+.topo .closed i::before, .topo .closed i::after {
+    height: 3px;
+}
+
+header .closed i::before, 
+#mobile .closed i::before {
+    transform: translate(-50%, 140%);
+}
+
+.topo .closed i::before {
+    top: -8px;
+}
+
+header .open i::before, 
+#mobile .open i::before,
+.topo .open i::before {
+    transform: rotate(45deg);
+    left: 4%;   
+}
+
+.topo .open i::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+header .closed i::after, 
+#mobile .closed i::after {
+    transform: translate(-50%, -240%);
+}
+
+.topo .closed i::after{
+    top: 10px;
+}
+
+header .open i::after, 
+#mobile .open i::after,
+.topo .open i::after{
+    transform: rotate(-45deg);
+    left: 4%;
+}
+
+.topo .open i::after {
+    transform: rotate(45deg);
+    top: 0;
+}

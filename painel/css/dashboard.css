@@ -1,0 +1,534 @@
+.btns .datas {
+    display: none;
+}
+
+a.disabled {
+    pointer-events: none;
+}
+
+a.disabled i {
+    color: #ccc;
+}
+
+.w-280 {
+    min-width: 280px !important;
+}
+
+.content {
+    margin-right: 7px;
+    position: relative;
+    min-height: calc(100% - 52px);
+    width: calc(100% - 260px);
+}
+
+@media only screen and (max-width: 650px) {
+    .content {
+        left: 5px
+    }
+}
+
+.content .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.content .title i {
+    margin-right: 15px;
+    font-size: 1.4em;
+}
+
+.content .data-site {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.content .data-site .box{
+    display: flex;
+    margin: auto;
+    height: 100px;
+    background-color: #fff;
+    min-width: 200px;
+    margin-bottom: 15px;
+    width: 220px 
+}
+
+.content .data-site .icon {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.content .data-site .icon i{
+    color: #fff;
+    font-size: 2.2em;
+}
+
+.content .data-site .box > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content .data-site h2 {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.content .data-site .box > div div {
+    font-size: 0.9em;
+}
+
+.home-first {
+    border-radius: 2px;
+    width: 97.5%;
+    margin: auto;
+}
+
+.home-first .users-online {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.users-online > h2 {
+    display: inline-block;
+}
+
+.users-online > h2 i {
+    color: green;
+}
+
+.users-online .table .title, .users-online .table .data-users-online {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.users-online .table .title h2 {
+    font-size: 1.3em;
+    background-color: rgb(36, 238, 36);
+    color: #fff;
+    padding: 6px
+}
+
+.users-online .table .data-users-online span {
+    display: block;
+}
+
+#logged i {
+    color:  #79c7f5;
+}
+
+#logged > h2 {
+    font-size: 1.6em;
+}
+
+#logged > h2 span {
+    margin-left: 10px;
+}
+
+#logged .title h2 {
+    background-color: #4abdff;
+}
+
+
+/* Editar Usuário */
+
+#edit-user .container {
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+#edit-user label {
+    padding-left: 0;
+}
+
+#edit-user [type=file] {
+    padding-left: 0px;
+}
+
+#edit-user [type=submit] {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color:  #3c8dbc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 450ms;
+}
+
+#edit-user [type=submit]:hover {
+    background-color:  #53b4ec;
+}
+
+
+/* INBOX */
+
+section#inbox {
+    background-color: #fff;
+    min-height: 90vh;
+    margin: 5px;
+    padding: 10px;
+    font-weight: light;
+}
+
+section#inbox .delete {
+    font-size: 1em;
+    margin-top: 50px;
+    color: #fff;
+    position: relative;
+    background-color: rgb(224, 73, 73);
+    display: inline-block;
+    padding: 0 10px;
+    height: 40px;
+}
+section#inbox .inbox-box {
+    border: 1px solid #ccc;
+    height: calc(100vh - 170px);
+}
+
+section#inbox .emails-list {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 3fr;
+}
+
+.emails-list .emails-headers {
+    border-right: 2px solid #ccc;
+    overflow-y: auto;
+}
+
+.emails-list .emails-headers::-webkit-scrollbar {
+    width: 5px;
+}
+
+.emails-list .emails-headers::-webkit-scrollbar-track {
+	background: none;
+}
+
+.emails-list .emails-headers::-webkit-scrollbar-thumb {
+	background: #ccc;
+}
+
+.emails-list .email {
+    position: relative;
+    height: 70px;
+    cursor: pointer;
+    display: block;
+    color: black;
+    transition: 100ms;
+}
+
+.emails-list .email:hover {
+    text-decoration: none;
+    background-color: rgba(110, 196, 236, 0.1);
+}
+
+.emails-list #email-atual{
+    background-color: rgba(110, 196, 236, 0.2);
+}
+
+.emails-list .email .date {
+    position: absolute;
+    top: 5px;
+    color: rgb(2, 24, 34);
+    right: 10px;
+    font-size: 0.6em;
+}
+
+.emails-list .email .name {
+    padding: 18px 0 5px 10px;
+    font-size: 0.8em;
+}
+
+.emails-list .email .address {
+    font-size: 0.7em;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.emails-list .email-body {
+    margin-left: 20px;
+    overflow-y: auto;
+    position: relative;
+    max-height: 100%;
+}
+
+.emails-list .email-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.emails-list .email-body::-webkit-scrollbar-track {
+	background: none;
+}
+
+.emails-list .email-body::-webkit-scrollbar-thumb {
+	background: #ccc;
+}
+
+.emails-list .email-body .inbox-start {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.emails-list .email-body .close {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #53b4ec;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    display: none;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+}
+
+.emails-list .email-body .close i {
+    color: #015f96;
+}
+
+.emails-list .email-body .inbox-start img {
+    height: 70%;
+}
+
+.emails-list .email-body div {
+    margin-bottom: 15px;
+}
+
+.emails-list .email-body .date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.7em;
+}
+
+.emails-list .email-body .name {
+    margin-top: 25px;
+}
+
+
+
+/* Edit User */
+
+.radios h5 {
+    font-weight: light;
+    font-size: 1em;
+    padding-right: 20px;
+}
+
+
+#add-user label {
+    margin-right: 10px !important;
+}
+
+/* Lista Depoimentos */
+
+section#depoiments {}
+
+section#depoiments .first {
+    margin-top: 20px;
+    overflow: auto;
+}
+
+section#depoiments .first::webkit-scrollbar {
+	width: 10px;
+}
+
+section#depoiments .first::-webkit-scrollbar-track {
+	background: none;
+}
+
+section#depoiments .first .title, section#depoiments .first .elements .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 90%;
+    margin: auto;
+}
+
+section#depoiments .third {
+    grid-template-columns: 1fr 1fr 1fr !important;
+}
+
+.noneDep {
+    max-width: 90%;
+    margin: auto;
+}
+
+section#depoiments .first .elements .box {
+    margin-bottom: 10px;
+}
+
+section#depoiments .first .elements .box h5 {
+    font-size: 1em;
+}
+
+.overflow-auto::-webkit-scrollbar {
+    width: 10px;
+}
+
+.overflow-auto::-webkit-scrollbar-track {
+	background: none;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+	background: rgb(163, 163, 163);
+}
+
+#box-edit form {
+    background: #fff;
+    padding: 10px 15px;
+    margin: 10px 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+@media (min-width: 980px) {
+    #box-edit form {
+        min-width: 700px
+    } 
+}
+
+
+#box-edit form #filo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#box-edit form #filo input {
+    width: 90%;
+}
+
+#box-edit form #filo img {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#box-edit form #filo .click-img {
+    display: inline-block;
+    border: 1px solid #1c7fb8;
+    background: #53b4ec;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: 450ms;
+    padding: 5px 10px;
+    margin: 0;
+    max-width: 200px
+}
+
+#box-edit form #filo .click-img:hover {
+    background: #1c7fb8;
+}
+
+#box-edit form #filo [type=file] {
+    display: none;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    section#depoiments .first .title, section#depoiments .first .elements .box {
+        max-width: 100%;
+    }
+}
+
+section#depoiments .first .title, section#depoiments .first .elements {
+    min-width: 700px;
+}
+
+section#depoiments .first .title h4 {
+    color: #fff;
+    padding: 10px;
+}
+
+section#depoiments .first .elements button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    width: 80px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .content {
+        width: 95%;
+        margin: 0;
+    }
+
+    .content .data-site {
+        display: block;
+    }
+
+    .content .data-site .box {
+        width: 100% !important;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    section#inbox .emails-list {
+        display: block;
+    }
+
+    section#inbox .emails-list .email-body {
+        position: absolute;
+        top: 56px;
+        left: -20px;
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        height: 90%;
+    }
+
+    section#inbox .emails-list .email-body-none {
+        display: none;
+    }
+
+    .emails-list .email-body .name {
+        margin-top: 45px;
+    }
+    
+    .emails-list .email-body .close {
+        display: inline-block;
+    }
+    
+    .emails-list .emails-headers {
+        border: none;
+        overflow-y: auto;
+        max-height: 100%;
+    }    
+        
+    .radios h5 {
+        padding-right: 0px;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px) {
+    .content .data-site {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content .data-site .box {
+        width: 95%;
+    }
+}
