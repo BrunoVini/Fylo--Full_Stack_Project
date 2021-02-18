@@ -491,7 +491,7 @@ section#depoiments .first .elements button {
 
     section#inbox .emails-list .email-body {
         position: absolute;
-        top: 56px;
+        top: 0;
         left: -20px;
         width: 100%;
         padding: 20px;
