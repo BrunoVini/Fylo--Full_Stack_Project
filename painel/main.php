@@ -39,19 +39,18 @@
     
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>styles/button.css">
+    
+
     <link href="<?php echo INCLUDE_PATH_PAINEL ?>css/style.css" rel="stylesheet" />
     <link href="<?php echo INCLUDE_PATH_PAINEL ?>css/dashboard.css" rel="stylesheet" />
+    <!-- Text Editor -->
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL ?>RichText/src/richtext.min.css">
 
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
-/>
-<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-<!-- or -->
-<link
-  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <!-- or -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 
 
 </head>
@@ -99,13 +98,9 @@
                         <i class="fas fa-file-medical"></i>
                         <span>Cadastrar Depoimento</span>
                     </a>
-                    <a <?php menuSelected('cadastrar-servico')?> href="<?php echo INCLUDE_PATH_PAINEL ?> cadastrar-servico">
+                    <a <?php menuSelected('cadastrar-noticia')?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-noticia">
                         <i class="fas fa-file-medical"></i>
-                        <span>Cadastrar Serviço</span>
-                    </a>
-                    <a <?php menuSelected('cadastrar-slides')?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-slides">
-                        <i class="fas fa-file-medical"></i>
-                        <span>Cadastrar Slides</span>
+                        <span>Cadastrar Notícia</span>
                     </a>
 
                     <div class="main-nav">
@@ -116,13 +111,9 @@
                         <i class="fas fa-bullhorn"></i>
                         <span>Listar Depoimentos</span>
                     </a>
-                    <a <?php menuSelected('listar-servicos')?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-servicos">
+                    <a <?php menuSelected('listar-noticias')?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-noticias">
                         <i class="fas fa-list-ol"></i>
-                        <span>Listar Serviços</span>
-                    </a>
-                    <a <?php menuSelected('listar-slides')?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-slides">
-                        <i class="far fa-file-image"></i>
-                        <span>Listar Slides</span>
+                        <span>Listar Notícias</span>
                     </a>
                     <a <?php menuSelected('inbox')?> href="<?php echo INCLUDE_PATH_PAINEL ?>inbox">
                         <i class="fas fa-inbox"></i>
@@ -295,12 +286,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/jquery.mask.js"></script>
-    <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/main.js"></script>
+
+    <!-- <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/main.js"></script> -->
     <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/configPainel.js"></script>
 
+    <script>
+        <?php include('js/main.js') ?>
+    </script>
 
 </body>
 

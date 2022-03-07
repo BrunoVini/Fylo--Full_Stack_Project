@@ -45,6 +45,8 @@
 
 <section id="depoiments">
 
+    <div id="modal"></div>
+
     <a class="link" href="<?php echo INCLUDE_PATH_PAINEL?>ordem-depoimentos">Alterar a ordem dos depoimentos</a>
     
     <div class="bg-white">
@@ -87,17 +89,20 @@
 <script>
 
     const deleteDepoiment = id => {
-        var rest = confirm('Deseja excluir esse depoimento?');
-        if(rest == true) {
-            $.post("ajax/deleteElSite.php", {id: id, table: 'site_depoiments'}, function(data) {
-                document.location='<?php echo INCLUDE_PATH_PAINEL?>listar-depoimentos';
-            })
-        } else return false;
+        // var rest = confirm('Deseja excluir esse depoimento?');
+        // if(rest == true) {
+        //     $.post("ajax/deleteElSite.php", {id: id, table: 'site_depoiments'}, function(data) {
+        //         document.location='<?php echo INCLUDE_PATH_PAINEL?>listar-depoimentos';
+        //     })
+        // } else return false;
+        $.post('components/modalbox.php', {title: 'depoimento', local: 'listar-depoimentos', id: id, table: 'site_depoiments'}, function(data) {
+            $('#modal').html(data)
+        })
     }
 
     const editDepoiment = id => {
         $('#depoiments .first').fadeOut(0);
-        $.post("ajax/edit-depoiment.php", {id: id}, function(data) {
+        $.post("components/edit-depoiment.php", {id: id}, function(data) {
             $('.link').addClass('d-none');
             $('.ajax').html(data);
         })
